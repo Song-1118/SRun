@@ -1,6 +1,6 @@
 name: 功能请求
 description: 提交一个功能建议帮助我们改进
-title:
+title: ["FEATURE"]
   - placeholder : "FEATURE"
 labels: ["FEATURE", "新提交"]
 body:
