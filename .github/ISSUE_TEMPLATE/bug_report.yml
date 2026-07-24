@@ -1,6 +1,7 @@
 name: Bug 报告
 description: 提交一个 Bug 帮助我们改进
-title: "[Bug] "
+title:
+  - placeholder : "BUG"
 labels: ["BUG","新提交"]
 body:
   - type: markdown
@@ -14,50 +15,20 @@ body:
       options:
         - label: 我已经搜索过现有的 Issues，确认这不是重复提交
           required: true
-        - label: 我已阅读并同意贡献者公约
-          required: true
   - type: textarea
     id: description
     attributes:
       label: 描述 Bug
-      description: 清晰简洁地描述这个 Bug 是什么。
-      placeholder: 告诉我们发生了什么
+      description: 简要描述这个BUG。
+      placeholder: 这个BUG是什么？
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
       label: 复现步骤
-      description: 一步步告诉我们如何复现这个 Bug
-      placeholder: |
-        1. 前往 '...'
-        2. 点击 '....'
-        3. 看到错误
-    validations:
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: 预期行为
-      description: 你原本期望发生什么？
-    validations:
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: 实际行为
-      description: 实际发生了什么？（如果有错误信息请贴在这里）
-    validations:
-      required: true
-  - type: dropdown
-    id: severity
-    attributes:
-      label: 严重程度
-      options:
-        - 严重
-        - 高
-        - 中
-        - 低
+      description: 告诉我们如何复现这个BUG。
+      placeholder: 复现这个BUG的步骤。
     validations:
       required: true
   - type: input
@@ -74,11 +45,15 @@ body:
       placeholder: 例如 v1.0.0
     validations:
       required: true
+    - type: markdown
+    attributes:
+      value: >
+        << **版本号提示**：你可以在软件设置 → 关于中找到当前版本号。
   - type: textarea
     id: logs
     attributes:
-      label: 日志/截图
-      description: 如果可以，请附上日志或截图（可直接拖拽图片到此处上传）
+      label: 附件
+      description: 产生BUG时的日志或截图（可直接拖拽图片到此处上传）
       render: shell
     validations:
       required: false

@@ -47,8 +47,6 @@
       "providerShortName": null,
       "signingIdentity": null
     },
-    "linux": {
-      "targets": ["deb", "appimage"]
-    }
+    "linux": {}
   }
 }
