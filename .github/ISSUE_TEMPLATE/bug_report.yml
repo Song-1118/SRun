@@ -1,8 +1,8 @@
 name: Bug 报告
 description: 提交一个 Bug 帮助我们改进
-title: ["BUG"]
-  - placeholder : "BUG"
-labels: ["BUG","新提交"]
+title:
+  placeholder: "BUG"
+labels: ["BUG", "新提交"]
 body:
   - type: markdown
     attributes:
@@ -45,7 +45,7 @@ body:
       placeholder: 例如 v1.0.0
     validations:
       required: true
-    - type: markdown
+  - type: markdown
     attributes:
       value: >
         << **版本号提示**：你可以在软件设置 → 关于中找到当前版本号。
